@@ -1,0 +1,15 @@
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\RentACar.Dal.dll.config
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\RentACar.Dal.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\RentACar.Dal.pdb
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\EntityFramework.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\RentACar.Model.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\RentACar.Model.pdb
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\RentACar.Model.dll.config
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\EntityFramework.xml
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\obj\Debug\RentACar.Dal.csprojAssemblyReference.cache
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\obj\Debug\RentACar.Dal.csproj.CoreCompileInputs.cache
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\obj\Debug\RentACar.Dal.csproj.CopyComplete
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\obj\Debug\RentACar.Dal.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Dal\obj\Debug\RentACar.Dal.pdb

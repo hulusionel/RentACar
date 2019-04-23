@@ -1,0 +1,17 @@
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Bll.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Bll.pdb
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\obj\Debug\RentACar.Bll.csprojAssemblyReference.cache
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\obj\Debug\RentACar.Bll.csproj.CoreCompileInputs.cache
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\obj\Debug\RentACar.Bll.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\obj\Debug\RentACar.Bll.pdb
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\Interfaces.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Dal.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Model.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\EntityFramework.dll
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\Interfaces.pdb
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Dal.pdb
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Dal.dll.config
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Model.pdb
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\RentACar.Model.dll.config
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\bin\Debug\EntityFramework.xml
+C:\Users\hulus\Desktop\SOA Proje\RentACar\RentACar.Bll\obj\Debug\RentACar.Bll.csproj.CopyComplete
