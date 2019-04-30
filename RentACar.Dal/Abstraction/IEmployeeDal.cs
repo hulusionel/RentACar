@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Dal.Abstraction
 {
-    public interface IEmployeeDal
+    public interface IEmployeeDal:IDisposable
     {
         Employees Insert(Employees entity);
         int Update(Employees entity);

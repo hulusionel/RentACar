@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Model", "RentACar.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{424C0CF1-09DD-4C85-A776-B97C63769973}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{9386ACCE-2507-4CFC-A821-9237EB53B560}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{424C0CF1-09DD-4C85-A776-B97C63769973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{424C0CF1-09DD-4C85-A776-B97C63769973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{424C0CF1-09DD-4C85-A776-B97C63769973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9386ACCE-2507-4CFC-A821-9237EB53B560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9386ACCE-2507-4CFC-A821-9237EB53B560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9386ACCE-2507-4CFC-A821-9237EB53B560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9386ACCE-2507-4CFC-A821-9237EB53B560}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

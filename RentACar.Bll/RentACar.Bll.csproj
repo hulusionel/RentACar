@@ -44,8 +44,9 @@
     <Compile Include="Concretes\CarManager.cs" />
     <Compile Include="Concretes\CustomerManager.cs" />
     <Compile Include="Concretes\EmployeeManager.cs" />
+    <Compile Include="Concretes\TransactionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToPasswordRepository.cs" />
+    <Compile Include="ToPassword.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">

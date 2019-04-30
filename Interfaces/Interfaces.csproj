@@ -44,6 +44,7 @@
     <Compile Include="AbstractModels\ICarService.cs" />
     <Compile Include="AbstractModels\ICustomerService.cs" />
     <Compile Include="AbstractModels\IEmployeeService.cs" />
+    <Compile Include="AbstractModels\ITransactionService.cs" />
     <Compile Include="IGenericService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

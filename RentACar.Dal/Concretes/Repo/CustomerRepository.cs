@@ -31,7 +31,11 @@ namespace RentACar.Dal.Concretes.Repo
             var customer = SelectById(id);
             return Delete(customer);
         }
-       
+        public Customers CustomerLogin(string UserName, string Password)
+        {
+            return RentACarContext.Customers.Where(x => x.UserName == UserName && x.Password == Password).SingleOrDefault();
+        }
+
 
         public Customers Insert(Customers entity)
         {
@@ -48,8 +52,14 @@ namespace RentACar.Dal.Concretes.Repo
         public int Update(Customers entity)
         {
             //AddOrUpdate = db'de veri yoksa kaydeder var ise günceller
-            RentACarContext.Customers.AddOrUpdate();
+            RentACarContext.Customers.AddOrUpdate(entity);
             return RentACarContext.SaveChanges(); //etkilenen satır sayısını döndürür
+        }
+
+        public void Dispose()
+        {
+            RentACarContext.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Interfaces.AbstractModels;
 using RentACar.Dal.Abstraction;
+using RentACar.Dal.Concretes.Repo;
 using RentACar.Model.EntityModels;
 
 namespace RentACar.Bll.Concretes
@@ -10,9 +11,9 @@ namespace RentACar.Bll.Concretes
     {
         ICustomerDal _customerDal;
 
-        public CustomerManager(ICustomerDal customerDal)
+        public CustomerManager()
         {
-            this._customerDal = customerDal;
+            this._customerDal = new CustomerRepository();
         }
 
         public bool Delete(Customers entity)
@@ -22,27 +23,98 @@ namespace RentACar.Bll.Concretes
 
         public bool DeletedById(int id)
         {
-            return _customerDal.DeletedById(id);
+            try
+            {
+                return _customerDal.DeletedById(id);
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Giriş Hatası Oluştu" );
+            }
+           
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+                _customerDal.Dispose();
         }
 
         public Customers Insert(Customers entity)
         {
+            entity.Password = new ToPassword().Md5(entity.Password);
             return _customerDal.Insert(entity);
+        }
+
+        public Customers CustomerLogin(string UserName, string Password)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(UserName.Trim()) || string.IsNullOrEmpty(Password.Trim()))
+                {
+                    throw new Exception("Müşteri Adı veya Parola Boş Geçilemez.");
+                }
+                var _password = new ToPassword().Md5(Password);//parola şifre dönüştürme
+                var Emp = _customerDal.CustomerLogin(UserName, _password);
+                if (Emp == null)
+                    throw new Exception("Müşteri Adı veya Parola Hatalı");
+                else
+                    return Emp;
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Giriş Hatası Oluştu" + err.Message);
+            }
         }
 
         public List<Customers> SelectAll()
         {
-            return _customerDal.SelectAll();
+            try
+            {
+                return _customerDal.SelectAll();
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Listelenemedi" );
+            }
+           
         }
 
         public Customers SelectById(int id)
         {
-            return _customerDal.SelectById(id);
+            try
+            {
+                return _customerDal.SelectById(id);
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Seçilemedi");
+            }
+           
         }
 
-        public int Update(Customers entity)
+        public Customers Update(Customers entity)
         {
-            return _customerDal.Update(entity);
+            try
+            {
+                //şifre hash yap
+                _customerDal.Update(entity);
+                return entity;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Seçilemedi");
+            }
+           
         }
     }
 }

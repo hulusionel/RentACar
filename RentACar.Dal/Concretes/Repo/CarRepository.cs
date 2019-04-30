@@ -22,7 +22,7 @@ namespace RentACar.Dal.Concretes.Repo
 
         public bool Delete(Cars entity)
         {
-            RentACarContext.Cars.Remove(entity);
+            RentACarContext.Cars.Remove(entity);            
             return RentACarContext.SaveChanges()>0;         
         }
 
@@ -34,21 +34,36 @@ namespace RentACar.Dal.Concretes.Repo
      
         public Cars Insert(Cars entity)
         {
-            RentACarContext.Cars.Add(entity);
+            RentACarContext.Cars.Add(entity);           
             RentACarContext.SaveChanges();
             return entity;
         }
 
         public List<Cars> SelectAll()
         {
+           // var context = RentACarContext.Cars;
+
+            //context.Where(x => x.CarLicenceAge <= 3);
+
+            //context.Where(x => x.CarDriverAge <= 25);
+
+           // return context.AsNoTracking().ToList();
+
             return RentACarContext.Cars.AsNoTracking().ToList();
+            //asnotracking Her zaman ilk db ye bakar cache'den yanlış veri getirmez
         }
 
         public int Update(Cars entity)
         {
             //AddOrUpdate = db'de veri yoksa kaydeder var ise günceller
-            RentACarContext.Cars.AddOrUpdate();
+            RentACarContext.Cars.AddOrUpdate(entity);
             return RentACarContext.SaveChanges(); //etkilenen satır sayısını döndürür
+        }
+
+        public void Dispose()
+        {
+            RentACarContext.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Dal.Abstraction
 {
-   public interface ICustomerDal
+   public interface ICustomerDal:IDisposable
     {
         Customers Insert(Customers entity);
         int Update(Customers entity);
@@ -16,5 +16,6 @@ namespace RentACar.Dal.Abstraction
         Customers SelectById(int id);
         bool DeletedById(int id);
         bool Delete(Customers entity);
+        Customers CustomerLogin(string UserName, string Password);
     }
 }

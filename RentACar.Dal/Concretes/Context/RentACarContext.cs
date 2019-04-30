@@ -11,7 +11,7 @@ namespace RentACar.Dal.Concretes.Context
         }
 
         public virtual DbSet<Cars> Cars { get; set; }
-        public virtual DbSet<Company> Company { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

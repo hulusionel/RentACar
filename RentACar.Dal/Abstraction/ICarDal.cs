@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Dal.Abstraction
 {
-    public interface ICarDal
+    public interface ICarDal:IDisposable
     {
         Cars Insert(Cars entity);
         int Update(Cars entity);
@@ -16,5 +16,6 @@ namespace RentACar.Dal.Abstraction
         Cars SelectById(int id);
         bool DeletedById(int id);
         bool Delete(Cars entity);
+
     }
 }

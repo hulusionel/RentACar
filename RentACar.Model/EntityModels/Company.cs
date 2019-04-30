@@ -12,8 +12,8 @@ namespace RentACar.Model.EntityModels
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Company()
         {
-            Cars = new HashSet<Cars>();
-            Employees = new HashSet<Employees>();
+            Cars = new List<Cars>();
+            Employees = new List<Employees>();
         }
 
         public int CompanyID { get; set; }
@@ -32,9 +32,9 @@ namespace RentACar.Model.EntityModels
         public int? Score { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cars> Cars { get; set; }
+        public virtual List<Cars> Cars { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employees> Employees { get; set; }
+        public virtual List<Employees> Employees { get; set; }
     }
 }

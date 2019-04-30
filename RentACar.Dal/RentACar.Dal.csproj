@@ -49,17 +49,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstraction\ICarDal.cs" />
+    <Compile Include="Abstraction\ICompanyDal.cs" />
     <Compile Include="Abstraction\ICustomerDal.cs" />
     <Compile Include="Abstraction\IEmployeeDal.cs" />
+    <Compile Include="Abstraction\ITransactionDal.cs" />
     <Compile Include="Concretes\Context\RentACarContext.cs" />
     <Compile Include="Concretes\Repo\CarRepository.cs" />
+    <Compile Include="Concretes\Repo\CompanyRepository.cs" />
     <Compile Include="Concretes\Repo\CustomerRepository.cs" />
     <Compile Include="Concretes\Repo\EmployeeRepository.cs" />
+    <Compile Include="Concretes\Repo\TransactionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

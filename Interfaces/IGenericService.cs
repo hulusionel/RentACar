@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-   public interface IGenericService<T>
+   public interface IGenericService<T>:IDisposable
     {
         T Insert(T entity);
-        int Update(T entity);
+        T Update(T entity);
         List<T> SelectAll();
         // List<T> Listele(Expression<Func<T, bool>> predicate); Dinamik Filtreleme 
         T SelectById(int id);
