@@ -11,7 +11,7 @@ namespace RentACar.Model.EntityModels
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customers()
         {
-            Transactions = new List<Transactions>();
+            Transactions = new HashSet<Transactions>();
         }
 
         [Key]
@@ -42,6 +42,6 @@ namespace RentACar.Model.EntityModels
         public long? TelNum { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual List<Transactions> Transactions { get; set; }
+        public virtual ICollection<Transactions> Transactions { get; set; }
     }
 }

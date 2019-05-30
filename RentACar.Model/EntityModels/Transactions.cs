@@ -8,6 +8,12 @@ namespace RentACar.Model.EntityModels
 
     public partial class Transactions
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Transactions()
+        {
+            CarDetail = new HashSet<CarDetail>();
+        }
+
         [Key]
         public int TransactionID { get; set; }
 
@@ -27,6 +33,9 @@ namespace RentACar.Model.EntityModels
 
         [Column(TypeName = "money")]
         public decimal? RentPrice { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CarDetail> CarDetail { get; set; }
 
         public virtual Cars Cars { get; set; }
 

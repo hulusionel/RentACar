@@ -23,29 +23,29 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            //using (var x = new EmployeeManager())
-            //{
-            //    Employees cust = new Employees();
-            //    cust = x.SelectById(4);
 
+
+            //using (var x = new TransactionManager())
+            //{
+            //    Transactions trans = new Transactions();
+            //    CarManager cm = new CarManager();
+            //    Cars car = new Cars();
+            //    CustomerManager cmm = new CustomerManager();
+
+
+            //    var selectedcar = cm.SelectById(2);
+            //    var selectedCustomer = cmm.SelectById(1);
+            //    x.Rent(trans,selectedcar,selectedCustomer, DateTime.Now, DateTime.Now);
             //}
 
-            //ekle
-            //using (var x = new CustomerManager())
-            //{
-            //    Customers cust = new Customers();
-            //    cust.FirstName = "Yasin";
-            //    cust.Password = "1234Aydın";
-            //    x.Insert(cust);
-            //}
 
-            //using (var x = new CustomerManager())
-            //{
-            //    Customers cust = new Customers();
-            //    cust = x.SelectById(1003);
-            //    x.Delete(cust);
-            //}
-            using (var x = new EmployeeManager())
+            using (var x = new CarDetailsManager())
+            {
+               // CarDetail cust = new CarDetail();
+                x.DailyKmControl(1, 4, DateTime.Now, 50);
+            }
+
+            using (var x = new CarDetailsManager())
             {
 
                 dataGridView1.DataSource = x.SelectAll();

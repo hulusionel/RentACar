@@ -1,10 +1,10 @@
 ﻿using RentACar.Dal.Abstraction;
-using RentACar.Dal.Concretes.Context;
 using RentACar.Model.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -60,6 +60,11 @@ namespace RentACar.Dal.Concretes.Repo
         {
             RentACarContext.Dispose();
             GC.SuppressFinalize(this);
+        }
+
+        public List<Customers> Listele(Expression<Func<Customers, bool>> predicate)
+        {
+            return RentACarContext.Customers.Where(predicate).ToList();
         }
     }
 }

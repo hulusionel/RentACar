@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace RentACar.Dal.Abstraction
         Customers Insert(Customers entity);
         int Update(Customers entity);
         List<Customers> SelectAll();
-        // List<T> Listele(Expression<Func<T, bool>> predicate); Dinamik Filtreleme 
+        List<Customers> Listele(Expression<Func<Customers, bool>> predicate); //Dinamik Filtreleme 
         Customers SelectById(int id);
         bool DeletedById(int id);
         bool Delete(Customers entity);

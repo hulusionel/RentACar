@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractModels\ICarDetailsService.cs" />
     <Compile Include="AbstractModels\ICarService.cs" />
     <Compile Include="AbstractModels\ICustomerService.cs" />
     <Compile Include="AbstractModels\IEmployeeService.cs" />

@@ -11,7 +11,8 @@ namespace RentACar.Model.EntityModels
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cars()
         {
-            Transactions = new List<Transactions>();
+            CarDetail = new HashSet<CarDetail>();
+            Transactions = new HashSet<Transactions>();
         }
 
         [Key]
@@ -47,9 +48,12 @@ namespace RentACar.Model.EntityModels
 
         public bool? Status { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CarDetail> CarDetail { get; set; }
+
         public virtual Company Company { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual List<Transactions> Transactions { get; set; }
+        public virtual ICollection<Transactions> Transactions { get; set; }
     }
 }

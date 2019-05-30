@@ -50,10 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityModels\CarDetail.cs" />
     <Compile Include="EntityModels\Cars.cs" />
     <Compile Include="EntityModels\Company.cs" />
     <Compile Include="EntityModels\Customers.cs" />
     <Compile Include="EntityModels\Employees.cs" />
+    <Compile Include="EntityModels\Reports.cs" />
     <Compile Include="EntityModels\sysdiagrams.cs" />
     <Compile Include="EntityModels\Transactions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

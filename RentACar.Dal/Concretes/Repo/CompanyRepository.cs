@@ -1,10 +1,10 @@
 ﻿using RentACar.Dal.Abstraction;
-using RentACar.Dal.Concretes.Context;
 using RentACar.Model.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,9 +13,11 @@ namespace RentACar.Dal.Concretes.Repo
     public class CompanyRepository : ICompanyDal
     {
         RentACarContext RentACarContext = new RentACarContext();
+
         public bool Delete(Company entity)
         {
-            RentACarContext.Companies.Remove(entity);
+           // RentACarContext.Companies.Remove(entity);
+            RentACarContext.Company.Remove(entity);
             return RentACarContext.SaveChanges() > 0;
         }
 
@@ -33,26 +35,31 @@ namespace RentACar.Dal.Concretes.Repo
 
         public Company Insert(Company entity)
         {
-            RentACarContext.Companies.Add(entity);
+            RentACarContext.Company.Add(entity);
             RentACarContext.SaveChanges();
             return entity;
         }
 
+        public List<Company> Listele(Expression<Func<Company, bool>> predicate)
+        {
+            return RentACarContext.Company.Where(predicate).ToList();
+        }
+
         public List<Company> SelectAll()
         {
-            return RentACarContext.Companies.AsNoTracking().ToList();
+            return RentACarContext.Company.AsNoTracking().ToList();
         }
 
         public Company SelectById(int id)
         {
-            return RentACarContext.Companies.Where(x => x.CompanyID == id).SingleOrDefault();
+            return RentACarContext.Company.Where(x => x.CompanyID == id).SingleOrDefault();
             //singleOrDefault varsa satır gönder yoksa null gönder
         }
 
         public int Update(Company entity)
         {
             //AddOrUpdate = db'de veri yoksa kaydeder var ise günceller
-            RentACarContext.Companies.AddOrUpdate(entity);
+            RentACarContext.Company.AddOrUpdate(entity);
             return RentACarContext.SaveChanges(); //etkilenen satır sayısını döndürür
         }
     }

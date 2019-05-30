@@ -1,10 +1,10 @@
 ﻿using RentACar.Dal.Abstraction;
-using RentACar.Dal.Concretes.Context;
 using RentACar.Model.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +13,7 @@ namespace RentACar.Dal.Concretes.Repo
     public class EmployeeRepository : IEmployeeDal
     {
         RentACarContext RentACarContext = new RentACarContext();
+        
 
         public Employees SelectById(int id)
         {
@@ -61,6 +62,11 @@ namespace RentACar.Dal.Concretes.Repo
         {
             RentACarContext.Dispose();
             GC.SuppressFinalize(this);
+        }
+
+        public List<Employees> Listele(Expression<Func<Employees, bool>> predicate)
+        {
+            return RentACarContext.Employees.Where(predicate).ToList();
         }
     }
 }
